@@ -12,6 +12,7 @@ filetype plugin indent on
 filetype plugin on 
 
 au FileType go colorscheme molokai
+autocmd BufWritePre *.go GoImports
 
 nmap <F8> :TagbarToggle<CR>
 
