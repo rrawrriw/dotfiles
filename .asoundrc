@@ -1,0 +1,16 @@
+pcm.!default {
+    type plug
+    slave.pcm {
+        @func getenv
+        vars [ ALSAPCM ]
+        default "hw"
+    }
+}
+
+pcm.myhdmi {
+	type plug slave {
+    		pcm "hw:1,3"
+    		channels 2 
+	}
+
+}

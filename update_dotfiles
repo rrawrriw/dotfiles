@@ -1,2 +1,3 @@
 cp -v .vimrc ~/
 cp -va .vim ~/
+cp -v .asoundrc ~/
