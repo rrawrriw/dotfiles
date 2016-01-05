@@ -14,6 +14,9 @@ filetype plugin on
 au FileType go colorscheme molokai
 autocmd BufWritePre *.go GoImports
 
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+autocmd BufWritePost *.js JSHint
+
 nmap <F8> :TagbarToggle<CR>
 
 call plug#begin('~/.vim/plugged')
@@ -26,6 +29,9 @@ Plug 'fatih/molokai'
 Plug 'garyburd/go-explorer'
 Plug 'SirVer/ultisnips'
 Plug 'ervandew/supertab'
+Plug 'mephux/vim-jsfmt'
+Plug 'pangloss/vim-javascript'
+Plug 'Shutnik/jshint2.vim'
 
 call plug#end()
 
@@ -42,3 +48,7 @@ let g:ycm_key_list_select_completion = ['<C-TAB>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-S-TAB>', '<Up>']
 
 let g:SuperTabDefaultCompletionType = '<C-Tab>'
+
+let g:js_fmt_autosave = 1
+
+
